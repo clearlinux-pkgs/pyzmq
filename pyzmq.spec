@@ -4,7 +4,7 @@
 #
 Name     : pyzmq
 Version  : 14.7.0
-Release  : 7
+Release  : 8
 URL      : https://pypi.python.org/packages/source/p/pyzmq/pyzmq-14.7.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pyzmq/pyzmq-14.7.0.tar.gz
 Summary  : Python bindings for 0MQ
