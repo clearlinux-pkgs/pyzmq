@@ -4,7 +4,7 @@
 #
 Name     : pyzmq
 Version  : 15.2.0
-Release  : 13
+Release  : 14
 URL      : https://pypi.python.org/packages/source/p/pyzmq/pyzmq-15.2.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pyzmq/pyzmq-15.2.0.tar.gz
 Summary  : Python bindings for 0MQ
