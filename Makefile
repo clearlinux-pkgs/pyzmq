@@ -1,5 +1,5 @@
 PKG_NAME := pyzmq
-URL := https://pypi.python.org/packages/source/p/pyzmq/pyzmq-15.2.0.tar.gz
+URL := http://pypi.debian.net/pyzmq/pyzmq-15.3.0.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
