@@ -4,14 +4,13 @@
 #
 Name     : pyzmq
 Version  : 16.0.2
-Release  : 24
+Release  : 25
 URL      : http://pypi.debian.net/pyzmq/pyzmq-16.0.2.tar.gz
 Source0  : http://pypi.debian.net/pyzmq/pyzmq-16.0.2.tar.gz
 Summary  : Python bindings for 0MQ
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-3.0 LGPL-3.0
 Requires: pyzmq-python
-Requires: Sphinx
 Requires: cffi
 Requires: py
 BuildRequires : cffi
@@ -39,12 +38,12 @@ python components for the pyzmq package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489025651
+export SOURCE_DATE_EPOCH=1489351757
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1489025651
+export SOURCE_DATE_EPOCH=1489351757
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
