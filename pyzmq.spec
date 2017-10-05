@@ -4,13 +4,14 @@
 #
 Name     : pyzmq
 Version  : 16.0.2
-Release  : 29
+Release  : 30
 URL      : http://pypi.debian.net/pyzmq/pyzmq-16.0.2.tar.gz
 Source0  : http://pypi.debian.net/pyzmq/pyzmq-16.0.2.tar.gz
 Summary  : Python bindings for 0MQ
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-3.0 LGPL-3.0
 Requires: pyzmq-legacypython
+Requires: pyzmq-python3
 Requires: pyzmq-python
 Requires: cffi
 Requires: py
@@ -38,6 +39,7 @@ dev components for the pyzmq package.
 %package legacypython
 Summary: legacypython components for the pyzmq package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the pyzmq package.
@@ -47,9 +49,19 @@ legacypython components for the pyzmq package.
 Summary: python components for the pyzmq package.
 Group: Default
 Requires: pyzmq-legacypython
+Requires: pyzmq-python3
 
 %description python
 python components for the pyzmq package.
+
+
+%package python3
+Summary: python3 components for the pyzmq package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the pyzmq package.
 
 
 %prep
@@ -60,12 +72,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505415324
+export SOURCE_DATE_EPOCH=1507171170
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505415324
+export SOURCE_DATE_EPOCH=1507171170
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -88,5 +100,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
