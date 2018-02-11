@@ -4,7 +4,7 @@
 #
 Name     : pyzmq
 Version  : 16.0.4
-Release  : 37
+Release  : 38
 URL      : http://pypi.debian.net/pyzmq/pyzmq-16.0.4.tar.gz
 Source0  : http://pypi.debian.net/pyzmq/pyzmq-16.0.4.tar.gz
 Summary  : Python bindings for 0MQ
@@ -49,7 +49,6 @@ legacypython components for the pyzmq package.
 %package python
 Summary: python components for the pyzmq package.
 Group: Default
-Requires: pyzmq-legacypython
 Requires: pyzmq-python3
 
 %description python
@@ -73,12 +72,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517507910
+export SOURCE_DATE_EPOCH=1518378196
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1517507910
+export SOURCE_DATE_EPOCH=1518378196
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
