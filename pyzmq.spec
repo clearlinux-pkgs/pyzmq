@@ -4,13 +4,12 @@
 #
 Name     : pyzmq
 Version  : 16.0.4
-Release  : 38
+Release  : 39
 URL      : http://pypi.debian.net/pyzmq/pyzmq-16.0.4.tar.gz
 Source0  : http://pypi.debian.net/pyzmq/pyzmq-16.0.4.tar.gz
 Summary  : Python bindings for 0MQ
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-3.0 LGPL-3.0
-Requires: pyzmq-legacypython
 Requires: pyzmq-python3
 Requires: pyzmq-python
 Requires: cffi
@@ -35,15 +34,6 @@ Provides: pyzmq-devel
 
 %description dev
 dev components for the pyzmq package.
-
-
-%package legacypython
-Summary: legacypython components for the pyzmq package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the pyzmq package.
 
 
 %package python
@@ -72,15 +62,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1518378196
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1518378665
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1518378196
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -90,14 +77,8 @@ echo ----[ mark ]----
 
 %files dev
 %defattr(-,root,root,-)
-/usr/lib/python2.7/site-packages/zmq/include/zmq.h
-/usr/lib/python2.7/site-packages/zmq/include/zmq_utils.h
 /usr/lib/python3.6/site-packages/zmq/include/zmq.h
 /usr/lib/python3.6/site-packages/zmq/include/zmq_utils.h
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
