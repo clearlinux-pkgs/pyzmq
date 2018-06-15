@@ -20,7 +20,7 @@ BuildRequires : libzmq-dev
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : py
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
