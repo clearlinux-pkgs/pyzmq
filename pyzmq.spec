@@ -4,7 +4,7 @@
 #
 Name     : pyzmq
 Version  : 17.0.0
-Release  : 48
+Release  : 49
 URL      : http://pypi.debian.net/pyzmq/pyzmq-17.0.0.tar.gz
 Source0  : http://pypi.debian.net/pyzmq/pyzmq-17.0.0.tar.gz
 Summary  : Python bindings for 0MQ
