@@ -4,7 +4,7 @@
 #
 Name     : pyzmq
 Version  : 18.1.1
-Release  : 60
+Release  : 61
 URL      : https://files.pythonhosted.org/packages/3c/83/7ecbe9b762829f589fa9734026e0ccb63cb128fe5615ae1698f65df72bfe/pyzmq-18.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3c/83/7ecbe9b762829f589fa9734026e0ccb63cb128fe5615ae1698f65df72bfe/pyzmq-18.1.1.tar.gz
 Summary  : Python bindings for 0MQ
