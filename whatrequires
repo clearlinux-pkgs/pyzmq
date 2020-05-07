@@ -5,4 +5,6 @@ jupyter_client
 locustio
 notebook
 partd
+qtconsole
+spyder-kernels
 tinyrpc
