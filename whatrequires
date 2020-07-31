@@ -6,5 +6,6 @@ locustio
 notebook
 partd
 qtconsole
+salt
 spyder-kernels
 tinyrpc
