@@ -4,7 +4,7 @@
 #
 Name     : pyzmq
 Version  : 19.0.2
-Release  : 68
+Release  : 69
 URL      : https://files.pythonhosted.org/packages/05/77/7483975d84fe1fd24cc67881ba7810e0e7b3ee6c2a0e002a5d6703cca49b/pyzmq-19.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/05/77/7483975d84fe1fd24cc67881ba7810e0e7b3ee6c2a0e002a5d6703cca49b/pyzmq-19.0.2.tar.gz
 Summary  : Python bindings for 0MQ
