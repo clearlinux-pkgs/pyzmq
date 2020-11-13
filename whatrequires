@@ -2,10 +2,8 @@
 bash_kernel
 ipython
 jupyter_client
-locustio
 notebook
 partd
 qtconsole
 salt
 spyder-kernels
-tinyrpc
