@@ -5,7 +5,6 @@ jupyter_client
 jupyter_server
 notebook
 partd
-petastorm
 qtconsole
 salt
 spyder-kernels
